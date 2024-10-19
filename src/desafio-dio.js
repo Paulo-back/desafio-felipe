@@ -1,30 +1,16 @@
-//Crie uma variavel para armazenar o nome e a quantidade de experiencia(xp)
-//de um heroi ,depois utilize uma estrutura de decisao para apresentar alguma
-//das mensagens abaixo:
-//
-//Se XP for menor do que 1.000 = Ferro
-//Se XP for entre 1.001 e 2.000 = Bronze
-//Se XP for entre 2.001 e 5.000 = Prata
-//Se XP for entre 6.001 e 7.000 = Ouro
-//Se XP for entre 7.001 e 8.000 = Platina
-//Se XP for entre 8.001 e 9.000 = Ascendente
-//Se XP for entre 9.001 e 10.000 = Imortal
-//Se XP for maior ou igual a  10.001 = Radiante
 
 const entrada = require('prompt-sync')({sigint: true});
 
-
-
-    
 let elo;
 
-console.log("Digite seu nome Heroi: ");
+console.log("Digite seu nome Herói: ");
 let nome = entrada();
 
-    do{  
-    console.log("Agora digite seu Xp: ");
-    let xp = parseInt(entrada());
+      
+    console.log("Digite seu Xp: ");
 
+    do{
+    let xp = parseInt(entrada());
     
         switch(true){
            
@@ -54,11 +40,9 @@ let nome = entrada();
                 break;
             default:
                 elo = 1;
-                console.log("Erro ao receber xp!\nPor favor digitar elo xp\n");
-              
-                
-            
-        }//Novo problema numeros negativos entram na categoria bronze rever isso!
+                console.log("\nErro ao receber xp!\n\nPor favor digitar um xp válido: ");                           
+           
+        }
     }while(elo==1);
 
  console.log("O Herói de nome "+nome+" está no nível de "+elo);
